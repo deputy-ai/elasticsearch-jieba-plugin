@@ -8,7 +8,7 @@
  */
 
 group 'org.elasticsearch'
-version = '1.0.0' // 适配不通版本的ES，可以修改这里。
+version = '8.15.3' // 适配不通版本的ES，可以修改这里。
 apply plugin: 'java'
 apply plugin: 'idea'
 
@@ -18,7 +18,6 @@ targetCompatibility = "18" // 不同版本的es，需要不同版本的java环�
 
 repositories {
     maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
-    jcenter()
     mavenCentral()
 }
 sourceSets {
@@ -55,7 +54,7 @@ configurations {
 
 dependencies {
     implementation project(":jieba-analysis")
-    implementation 'org.elasticsearch:elasticsearch:8.4.1' // 适配不通版本的ES，可以修改这里。
+    implementation 'org.elasticsearch:elasticsearch:8.15.3' // 适配不通版本的ES，可以修改这里。
     implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
     testImplementation 'junit:junit:4.13.2'
